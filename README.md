@@ -49,13 +49,13 @@ myApp/
 
 This is short detail of this structure:
 
-1. cmd/ : application service layers ex. api, migration, rabbitmq, cronjob or any will define at here
-2. consts/,emsgs/,helpers/ : to store values or functions that are reused frequently in a project, you can use various approaches depending on the programming language and the project's structure
-3. migrations/ : for file of migration or sql query files.
-4. models/ : create models for each module to connect to a database
-5. repo/ : this repo is logic or query for connect with database
-6. services/ : service of module for handle all business logic
-7. views/ : make response following requirement
+1. `cmd/`: Application service layers, such as API, migration, RabbitMQ, cronjob, or any other services, are defined here.
+2. `consts/` , `emsgs/`, `helpers/`: These directories store values or functions that are frequently reused in a project. The approach can vary depending on the programming language and the project's structure.
+3. `migrations/`: This directory contains migration files or SQL query files.
+4. `models/`: This directory contains models for each module to connect to a database.
+5. `repo/`: This directory contains the logic or queries for connecting to the database.
+6. `services/`: This directory handles all business logic for each module.
+7. `views/`: This directory is responsible for creating responses according to the requirements.
 
 ### Node.js Express Project Structure
 
@@ -101,8 +101,8 @@ myApp/
 
 This is short detail of this structure:
 
-1. config/ : to store value or fuction for config of project to use ex. connect db , env key value
-2. controllers/ : handlers of application for get request or send response
-3. middleware/ : for make permission or error handle
-4. models/ : declare model for use
-5. services/ : service of module for handle all business logic
+1. `config/`: Stores values or functions for project configuration, such as database connections and environment key values.
+2. `controllers/`: Handles application requests and responses.
+3. `middleware/`: Manages permissions and error handling.
+4. `models/`: Declares models for use.
+5. `services/`: Handles all business logic for each module.
