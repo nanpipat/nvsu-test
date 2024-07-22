@@ -3,7 +3,7 @@
  * @param {string[]} arr - The input array of potential smiley faces
  * @return {number} - The count of valid smiley faces
  */
-function countSmilys(arr) {
+export default function countSmilys(arr) {
   // Define valid parts of a smily face
   const eyes = [":", ";"];
   const noses = ["-", "~"];
@@ -25,5 +25,3 @@ function countSmilys(arr) {
 
   return count;
 }
-
-module.exports = countSmilys;

@@ -1,27 +1,44 @@
 import { manipulate } from "./manipulate";
+import assert from "assert";
 
-describe("manipulate", () => {
-  // Test for single character input
-  it("should handle single character input", () => {
-    expect(manipulate("a")).toEqual(["a"]);
-  });
+function testSingleCharacterInput() {
+  assert.deepStrictEqual(
+    manipulate("a"),
+    ["a"],
+    "Should handle single character input"
+  );
+}
 
-  // Test for two character input
-  it("should generate correct manipulations for two characters", () => {
-    expect(manipulate("ab").sort()).toEqual(["ab", "ba"].sort());
-  });
+function testTwoCharacterInput() {
+  assert.deepStrictEqual(
+    manipulate("ab").sort(),
+    ["ab", "ba"].sort(),
+    "Should generate correct manipulations for two characters"
+  );
+}
 
-  // Test for three character input
-  it("should generate correct manipulations for three characters", () => {
-    expect(manipulate("abc").sort()).toEqual(
-      ["abc", "acb", "bac", "bca", "cab", "cba"].sort()
-    );
-  });
+function testThreeCharacterInput() {
+  assert.deepStrictEqual(
+    manipulate("abc").sort(),
+    ["abc", "acb", "bac", "bca", "cab", "cba"].sort(),
+    "Should generate correct manipulations for three characters"
+  );
+}
 
-  // Test for input with duplicates
-  it("should handle input with duplicates", () => {
-    expect(manipulate("aabb").sort()).toEqual(
-      ["aabb", "abab", "abba", "baab", "baba", "bbaa"].sort()
-    );
-  });
-});
+function testInputWithDuplicates() {
+  assert.deepStrictEqual(
+    manipulate("aabb").sort(),
+    ["aabb", "abab", "abba", "baab", "baba", "bbaa"].sort(),
+    "Should handle input with duplicates"
+  );
+}
+
+function runTests() {
+  testSingleCharacterInput();
+  testTwoCharacterInput();
+  testThreeCharacterInput();
+  testInputWithDuplicates();
+  console.log("All manipulate tests passed!");
+}
+
+runTests();

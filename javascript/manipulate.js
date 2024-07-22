@@ -3,7 +3,7 @@
  * @param {string} str - The input string
  * @return {string[]} - Array of unique manipulate
  */
-function manipulate(str) {
+export default function manipulate(str) {
   // Base case: if string is 1 character or less, return it
   if (str.length <= 1) return [str];
 
@@ -29,4 +29,4 @@ function manipulate(str) {
   return Array.from(new Set(result));
 }
 
-module.exports = manipulate;
+// module.exports = manipulate;

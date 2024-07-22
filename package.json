@@ -1,4 +1,9 @@
 {
+  "type": "module",
+  "scripts": {
+    "test:ts": "ts-node typescript/manipulate.spec.ts && ts-node typescript/odd-number.spec.ts && ts-node typescript/smily.spec.ts",
+    "test:js": "node javascript/manipulate.spec.js && node javascript/odd-number.spec.js && node javascript/smily.spec.js"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.11",

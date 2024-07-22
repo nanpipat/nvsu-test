@@ -1,23 +1,44 @@
 import { countSmilys } from "./smily";
+import assert from "assert";
 
-describe("countSmilys", () => {
-  // Test for two valid smilies
-  it("should count two valid smilies", () => {
-    expect(countSmilys([":)", ";(", ";}", ":-D"])).toBe(2);
-  });
+function testTwoValidSmilies() {
+  assert.strictEqual(
+    countSmilys([":)", ";(", ";}", ":-D"]),
+    2,
+    "Should count two valid smilies"
+  );
+}
 
-  // Test for three valid smilies
-  it("should count three valid smilies", () => {
-    expect(countSmilys([";D", ":-(", ":-)", ";~)"])).toBe(3);
-  });
+function testThreeValidSmilies() {
+  assert.strictEqual(
+    countSmilys([";D", ":-(", ":-)", ";~)"]),
+    3,
+    "Should count three valid smilies"
+  );
+}
 
-  // Test for one valid smily
-  it("should count one valid smily", () => {
-    expect(countSmilys([";]", ":[", ";*", ":$", ";-D"])).toBe(1);
-  });
+function testOneValidSmily() {
+  assert.strictEqual(
+    countSmilys([";]", ":[", ";*", ":$", ";-D"]),
+    1,
+    "Should count one valid smily"
+  );
+}
 
-  // Test for empty array
-  it("should return zero for an empty array", () => {
-    expect(countSmilys([])).toBe(0);
-  });
-});
+function testEmptyArray() {
+  assert.strictEqual(
+    countSmilys([]),
+    0,
+    "Should return zero for an empty array"
+  );
+}
+
+function runTests() {
+  testTwoValidSmilies();
+  testThreeValidSmilies();
+  testOneValidSmily();
+  testEmptyArray();
+  console.log("All smily tests passed!");
+}
+
+runTests();

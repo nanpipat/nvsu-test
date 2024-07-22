@@ -3,7 +3,7 @@
  * @param {number[]} arr - The input array of integers
  * @return {number} - The integer that appears an odd number of times
  */
-function findOdd(arr) {
+export default function findOdd(arr) {
   const count = {};
 
   // Count the frequency of each number
@@ -19,4 +19,4 @@ function findOdd(arr) {
   }
 }
 
-module.exports = findOdd;
+// module.exports = findOdd;
