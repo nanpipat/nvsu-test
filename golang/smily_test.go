@@ -3,15 +3,15 @@ package main
 import "testing"
 
 func TestCountSmilys(t *testing.T) {
-	// Test for two valid smilies
-	t.Run("two valid smilies", func(t *testing.T) {
+	// Test for two valid smilys
+	t.Run("two valid smilys", func(t *testing.T) {
 		if countSmilys([]string{":)", ";(", ";}", ":-D"}) != 2 {
 			t.Errorf("Expected 2, but got %d", countSmilys([]string{":)", ";(", ";}", ":-D"}))
 		}
 	})
 
-	// Test for three valid smilies
-	t.Run("three valid smilies", func(t *testing.T) {
+	// Test for three valid smilys
+	t.Run("three valid smilys", func(t *testing.T) {
 		if countSmilys([]string{";D", ":-(", ":-)", ";~)"}) != 3 {
 			t.Errorf("Expected 3, but got %d", countSmilys([]string{";D", ":-(", ":-)", ";~)"}))
 		}

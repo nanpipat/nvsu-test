@@ -1,19 +1,19 @@
 import { countSmilys } from "./smily";
 import assert from "assert";
 
-function testTwoValidSmilies() {
+function testTwoValidSmilys() {
   assert.strictEqual(
     countSmilys([":)", ";(", ";}", ":-D"]),
     2,
-    "Should count two valid smilies"
+    "Should count two valid smilys"
   );
 }
 
-function testThreeValidSmilies() {
+function testThreeValidSmilys() {
   assert.strictEqual(
     countSmilys([";D", ":-(", ":-)", ";~)"]),
     3,
-    "Should count three valid smilies"
+    "Should count three valid smilys"
   );
 }
 
@@ -34,8 +34,8 @@ function testEmptyArray() {
 }
 
 function runTests() {
-  testTwoValidSmilies();
-  testThreeValidSmilies();
+  testTwoValidSmilys();
+  testThreeValidSmilys();
   testOneValidSmily();
   testEmptyArray();
   console.log("All smily tests passed!");

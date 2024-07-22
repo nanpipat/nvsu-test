@@ -2,7 +2,7 @@ package main
 
 import "strings"
 
-// countSmilies counts the number of valid smily faces in the slice.
+// countSmilys counts the number of valid smily faces in the slice.
 func countSmilys(arr []string) int {
 	// Define valid parts of a smily face
 	eyes := []string{":", ";"}
